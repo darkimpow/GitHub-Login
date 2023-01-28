@@ -9,14 +9,14 @@
 <!--first section of web page containing octo logo & greeting-->
 <div class=" flex flex-col justify-center items-center pt-20">
     <img src="github-mark.svg" alt="github octocat">
-<div class="flex flex-col justify-center items-center pt-4">
-    <h1 class="font-semibold text-3xl text-black">
-        Sign in to GitHub
-    </h1>
-</div>
+    <div class="flex flex-col justify-center items-center pt-4">
+        <h1 class="font-semibold text-3xl text-black">
+            Sign in to GitHub
+        </h1>
+    </div>
     <!-- box border with form for sign in fields-->
     <div class="flex items-center box-content shadow-md h-72 w-96 mt-10 border-2 rounded">
-        <form class="bg-white rounded px-8">
+        <form id="mainarea" class="bg-white rounded px-8">
             <div class="mt-8">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
                     Username or email address
@@ -27,19 +27,21 @@
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
                     Password <a href="#" class="ml-32 text-blue-600 font-medium" >Forgot Password?</a>
                 </label>
-                <input class="shadow appearance-none border rounded w-80 py-2 px-3 text-gray-700 leading-tight  focus:shadow-outline" id="username" type="text" placeholder="Password..?">
+                <input class="shadow appearance-none border rounded w-80 py-2 px-3 text-gray-700 leading-tight  focus:shadow-outline" id="password" type="text" placeholder="Password..?">
                 <!--Sign in button-->
                 <div class="flex flex-col justify-center items-center mt-10">
-                    <button class="bg-green-600 h-8 w-72 rounded text-white hover:bg-green-700">Sign In</button>
+                    <button id="submit-btn" type="submit" class="bg-green-600 h-8 w-72 rounded text-white hover:bg-green-700">Sign In</button>
                 </div>
             </div>
         </form>
     </div>
     <!--second box for forgot password link-->
-    <br>
+    <br><br><br>
+    <div id="alertbox" pb="4"></div>
+
     <div class=" flex items-center box-content h-16 w-96 border-2 rounded shadow-md">
         <div class="flex ml-20">
-        <p>New to GitHub?</p> <a href="#" class=" ml-2 text-blue-700" >Create an account.</a>
+            <p>New to GitHub?</p> <a href="#" class=" ml-2 text-blue-700" >Create an account.</a>
         </div>
     </div>
     <!--links misc terms-->
@@ -52,6 +54,6 @@
 
 </div>
 
-
+<script src="app.js"></script>
 </body>
 </html>
